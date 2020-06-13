@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Game</title>
+</head>
+<style>
+    * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }   /* Removes global margins*/
+
+    section{
+        height: 100vh; 
+        background-color:rgb(68, 36, 36);
+        font-family:Arial, Helvetica, sans-serif; 
+    }
+
+    h1{
+        color: orange;
+        text-align: center;
+    }
+
+    .score{
+        color: orange;  
+        height: 20vh; 
+        display: flex; 
+        justify-content: space-around; 
+        align-items: center;
+    }
+
+    .score h2 {
+        font-size: 30px;
+    }
+    .score p {
+        text-align: center;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .intro{ 
+        color: beige; 
+        height: 50vh; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: space-around;
+        transition: opacity 0.5s ease-out;
+    }
+    
+    .intro h1 {
+        font-size: 50px;
+    }
+
+    .intro button, .match button {
+        width: 150px;
+        height: 50px;
+        font-size: 20px; 
+        background: none; 
+        background-color: beige;
+        border-radius: 3px;
+    }
+
+    .match{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-120%);
+        transition: opacity 0.5s ease-out 0.5s;
+    }
+
+    .winner {
+        color: orange;
+        text-align: center;
+        font-size: 30px;
+
+    }
+
+    .hands, .options {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -10px;
+        margin-bottom: -10px ;
+    }
+
+    .player-hand {    
+        margin-right: 200px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        transform: rotateY(180deg);
+    }
+
+    button {
+        margin-right: 70px;
+        margin-left: 70px;
+        cursor: pointer;
+    }
+
+
+    div.fadeOut{
+        opacity: 0; 
+        pointer-events: none;
+    }
+
+    div.fadeIn{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: none;
+        padding: 5px 5px 5px 5px;
+        margin-left: 60px;
+        margin-right: 60px;
+        font-family:Arial, Helvetica, sans-serif; 
+        font-size: 50px;
+        font-weight: bold;
+        color: orange;
+        transition: opacity 0.5s ease-out 0.5s;
+    }
+
+
+</style>
+
+<body>
+     <section class="game">  
+        <div class="score">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <h1>Rock Paper and Scissors</h1>
+            <button>Let's Play!</button>
+        </div>
+        <div class="match fadeOut">
+            <h2 class="winner">Choose an Option</h2>
+            <div class="hands">
+               <img class="player-hand" src="file:///Users/ifeolaifa/Desktop/domcrashcourse/Computerhand.png"></img>
+               <img class="computer-hand" src="file:///Users/ifeolaifa/Desktop/domcrashcourse/PlayerHand.png".></img>
+            </div>
+            <div class="options">
+               <button class="rock">Rock</button>
+               <button class="scissors">Scissors</button>
+               <button class="paper">Paper</button>
+            </div>
+        </div>
+        <div class="container fadeOut">
+            <p class="inform">The Computer Plays Located Here</p>
+        </div>
+     </section>
+
+     <script src="game.js"> </script> 
+</body>
+
+</html>
